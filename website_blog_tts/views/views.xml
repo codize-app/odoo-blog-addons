@@ -1,0 +1,42 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="blog_post_form">
+      <field name="name">blog.post.form</field>
+      <field name="model">blog.post</field>
+      <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+      <field name="arch" type="xml">
+         <sheet position="before">
+           <header>
+             <button name="generate_tts" type="object" string="Generar TTS" />
+           </header>
+         </sheet>
+      </field>
+     </record>
+
+     <record id="blog_post_website_audio" model="ir.ui.view">
+        <field name="name">blog.post.website.audio</field>
+        <field name="inherit_id" ref="website_blog.blog_post_content"/>
+        <field name="arch" type="xml">
+           <xpath expr="//div" position="before">
+                  <audio t-if="blog_post.content_tts" controls="true" class="w-100">
+		     <source t-att-src="'/web/image/blog.post/' + str(blog_post.id) + '/content_tts'" type="audio/mpeg" />
+		     Your browser does not support the audio tag.
+		  </audio>
+           </xpath>
+        </field>
+     </record>
+
+
+     <!--record model="ir.ui.view" id="blog_post_web_audio">
+      <field name="name">blog.post.web.audio</field>
+      <field name="inherit_id" ref="website_blog.blog_post_complete"/>
+      <field name="arch" type="xml">
+         <xpath expr="//div/div" position="inside">
+			<span>HOLA MUNDO </span>
+         </xpath>
+      </field>
+     </record-->
+
+  </data>
+</odoo>

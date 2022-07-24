@@ -1,0 +1,18 @@
+<odoo>
+  <data>
+
+     <record model="ir.ui.view" id="blog_post_form">
+      <field name="name">blog.post.form</field>
+      <field name="model">blog.post</field>
+      <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+      <field name="arch" type="xml">
+         <group name="publishing_details" position="after">
+            <group>
+                <field name="content" />
+            </group>
+         </group>
+      </field>
+     </record>
+
+  </data>
+</odoo>

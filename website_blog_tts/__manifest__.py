@@ -16,6 +16,9 @@
     'version': '0.1',
 
     'depends': ['base', 'website', 'website_blog'],
+    'external_dependencies': {
+        'python': ['pyttsx3']
+    },
 
     'data': [
         'views/views.xml',

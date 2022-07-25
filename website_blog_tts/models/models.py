@@ -9,6 +9,7 @@ import os
 
 engine = pyttsx3.init();
 engine.setProperty('voice', 'spanish')
+engine.setProperty("rate", 220)
 
 regex = re.compile(r'<[^>]+>')
 
@@ -21,13 +22,10 @@ class BlogPost(models.Model):
     def generate_tts(self):
         self.remove_tts()
         content = regex.sub('', self.content)
-        if len(content) > 6500:
-            content = content[:6500]
-        engine.save_to_file(content, '/tmp/speech.mp3')
+        engine.save_to_file(content[:6500], '/tmp/speech.mp3')
         engine.runAndWait()
         file = open('/tmp/speech.mp3', 'rb')
         data = file.read()
-        file.close()
         os.unlink('/tmp/speech.mp3')
         encoded = base64.b64encode(data)
         self.content_tts = encoded

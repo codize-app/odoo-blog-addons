@@ -9,6 +9,7 @@
          <sheet position="before">
            <header>
              <button name="generate_tts" type="object" string="Generar TTS" />
+             <button name="remove_tts" type="object" string="Eliminar TTS" />
            </header>
          </sheet>
       </field>
@@ -26,17 +27,6 @@
            </xpath>
         </field>
      </record>
-
-
-     <!--record model="ir.ui.view" id="blog_post_web_audio">
-      <field name="name">blog.post.web.audio</field>
-      <field name="inherit_id" ref="website_blog.blog_post_complete"/>
-      <field name="arch" type="xml">
-         <xpath expr="//div/div" position="inside">
-			<span>HOLA MUNDO </span>
-         </xpath>
-      </field>
-     </record-->
 
   </data>
 </odoo>

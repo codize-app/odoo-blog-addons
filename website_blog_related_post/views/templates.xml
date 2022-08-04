@@ -13,7 +13,7 @@
         <field name="inherit_id" ref="website_blog.blog_post_content"/>
         <field name="arch" type="xml">
            <xpath expr="//div" position="after">
-                <div class="js_get_this_posts row" t-att-id="blog_post.id">
+                <div class="js_get_this_posts row mb-2" t-att-id="blog_post.id">
                   <div class="col-12">
                     <h4 class="w-100">Entradas Relacionadas</h4>
                   </div>

@@ -34,12 +34,12 @@ odoo.define('website_blog_related_post.related_post_js', function (require) {
               var s = '<div class="col-12 col-md-4 media s_latest_posts_post" style="opacity:0.8;">\
                                                  <div class="media-body ml-3 pb-2">\
                                                     <h5>\
-                                                      <a href="/blog/' + posts.posts[i].blog_id.id + '/post/' + posts.posts[i].id + '">\
+                                                      <a href="/blog/' + posts.posts[i].blog_id + '/post/' + posts.posts[i].id + '">\
                                                         <span class="text-truncate">' + posts.posts[i].name  + '<span>\
                                                       </a>\
                                                     </h5>\
                                                     <p>' + posts.posts[i].teaser + '</p>
-                                                    <a class="btn btn-sm btn-primary" href="/blog/' + posts.posts[i].blog_id.id + '/post/' + posts.posts[i].id + '">Seguir leyendo</a>\
+                                                    <a class="btn btn-sm btn-primary" href="/blog/' + posts.posts[i].blog_id + '/post/' + posts.posts[i].id + '">Seguir leyendo</a>\
                                                   </div>\
                                               </div>';
               $('.js_get_this_posts').append(s);

@@ -1,0 +1,19 @@
+<odoo>
+  <data>
+
+     <record id="blog_post_website_tags" model="ir.ui.view">
+        <field name="name">blog.post.website.tags</field>
+        <field name="inherit_id" ref="website_blog.blog_post_content"/>
+        <field name="arch" type="xml">
+           <xpath expr="//div[@class='css_editable_mode_hidden text-muted']" position="after">
+               <div t-if="blog_post.website_meta_keywords" class="mt-2">
+                  <small t-foreach="blog_post.website_meta_keywords.split(',')" t-as="tags" class="badge border mr-1">
+                    <t t-esc="tags" />
+                  </small>
+               </div>
+           </xpath>
+        </field>
+        </record>
+
+  </data>
+</odoo>

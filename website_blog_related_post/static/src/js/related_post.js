@@ -27,8 +27,6 @@ odoo.define('website_blog_related_post.related_post_js', function (require) {
                 id: parseInt(blogID)
             },
           }).then(function (posts) {
-            console.log('POST', posts);
-
             for(var i=0; i < posts.posts.length; i++){
               console.log(posts.posts[i]);
               var s = '<div class="col-12 col-md-4 media s_latest_posts_post" style="opacity:0.8;">\

@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
            <xpath expr="//div[@class='css_editable_mode_hidden text-muted']" position="after">
                <div t-if="blog_post.website_meta_keywords" class="mt-2">
-                  <small t-foreach="blog_post.website_meta_keywords.split(',')" t-as="tags" class="badge border mr-1">
+                  <small t-foreach="blog_post.website_meta_keywords.split(',')" t-as="tags" class="badge border text-primary me-1">
                     <t t-esc="tags" />
                   </small>
                </div>

@@ -20,6 +20,12 @@
     'data': [
         'views/templates.xml',
     ],
+    'assets': {
+        'web.assets_frontend': [
+            '/website_blog_related_post/static/src/js/related_post.js',
+            '/website_blog_related_post/static/src/css/style.css'
+        ],
+    },
     'demo': [
     ],
 }

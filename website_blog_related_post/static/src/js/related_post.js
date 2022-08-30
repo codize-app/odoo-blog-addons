@@ -37,7 +37,7 @@ odoo.define('website_blog_related_post.related_post_js', function (require) {
                                                       </a>\
                                                     </h5>\
                                                     <p class="text-blog-related">' + posts.posts[i].teaser + '</p>
-                                                    <a class="btn btn-sm btn-primary" href="/blog/' + posts.posts[i].blog_id + '/post/' + posts.posts[i].id + '">Seguir leyendo</a>\
+                                                    <a class="btn btn-primary" href="/blog/' + posts.posts[i].blog_id + '/post/' + posts.posts[i].id + '">Seguir leyendo</a>\
                                                   </div>\
                                               </div>';
               $('.js_get_this_posts').append(s);

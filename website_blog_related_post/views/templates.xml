@@ -1,13 +1,6 @@
 <odoo>
     <data>
 
-       <template id="assets_frontend" inherit_id="web.assets_frontend">
-        <xpath expr="." position="inside">
-                <link rel="stylesheet" href="/website_blog_related_post/static/src/css/style.css" />
-                <script type="text/javascript" src="/website_blog_related_post/static/src/js/related_post.js" />
-        </xpath>
-       </template>
-
         <record id="blog_post_website_related" model="ir.ui.view">
         <field name="name">blog.post.website.related</field>
         <field name="inherit_id" ref="website_blog.blog_post_content"/>

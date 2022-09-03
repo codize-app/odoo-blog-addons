@@ -6,8 +6,6 @@ odoo.define('website_blog_related_post.related_post_js', function (require) {
    const dom = require('web.dom');
    const publicWidget = require('web.public.widget');
 
-   console.log('GET RELATED POST');
-
    publicWidget.registry.websiteBlogRelated = publicWidget.Widget.extend({
        selector : '.js_get_this_posts',
 
@@ -28,7 +26,6 @@ odoo.define('website_blog_related_post.related_post_js', function (require) {
             },
           }).then(function (posts) {
             for(var i=0; i < posts.posts.length; i++){
-              console.log(posts.posts[i]);
               var s = '<div class="col-12 col-md-4 media s_latest_posts_post" style="opacity:0.8;">\
                                                  <div class="media-body ml-3 pb-2 w-100">\
                                                     <h5>\

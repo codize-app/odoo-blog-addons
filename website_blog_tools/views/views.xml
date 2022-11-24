@@ -8,7 +8,7 @@
       <field name="arch" type="xml">
          <group name="publishing_details" position="after">
             <group>
-                <field name="content" />
+                <field name="content" widget="html" options="{'codeview': true}" />
             </group>
          </group>
       </field>

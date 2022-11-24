@@ -33,7 +33,7 @@ odoo.define('website_blog_related_post.related_post_js', function (require) {
                                                         <span class="text-truncate d-block">' + posts.posts[i].name  + '<span>\
                                                       </a>\
                                                     </h5>\
-                                                    <p class="text-blog-related">' + posts.posts[i].teaser + '</p>
+                                                    <p class="text-blog-related">' + posts.posts[i].teaser + '</p>\
                                                     <a class="btn btn-primary" href="/blog/' + posts.posts[i].blog_id + '/post/' + posts.posts[i].id + '">Seguir leyendo</a>\
                                                   </div>\
                                               </div>';

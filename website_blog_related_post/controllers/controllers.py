@@ -11,7 +11,7 @@ class WebsiteBlog(http.Controller):
     #    posts = request.env['blog.post'].search(domain, limit=limit, order=order)
     #    return request.env.ref(template).render({'posts': posts})
 
-    @http.route(['/blog/render_related_posts'], type='json', auth='public', website=True)
+    @http.route(['/blog/render_related_posts'], type='jsonrpc', auth='public', website=True)
     def render_related_posts(self, id, limit=None):
         post = request.env['blog.post'].search([('id', '=', id)])
         posts = []

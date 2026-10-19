@@ -7,6 +7,7 @@ regex = re.compile(r'<[^>]+>')
 class BlogPost(models.Model):
     _inherit = 'blog.post'
 
+    @api.depends('content')
     def _compute_readtime(self):
         for post in self:
             content = regex.sub('', post.content)

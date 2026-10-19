@@ -13,7 +13,7 @@
     'website': "https://www.codize.ar",
 
     'category': 'Website',
-    'version': '0.1',
+    'version': '19.0.1.0.0',
     'license': 'AGPL-3',
 
     'depends': ['base', 'website', 'website_blog'],

@@ -2,7 +2,7 @@
 <odoo>
     <template id="opt_blog_post_share_links_display_whatsapp" inherit_id="website_blog.opt_blog_post_share_links_display">
         <xpath expr="//div[hasclass('o_wblog_social_links')]" position="inside">
-            <a t-attf-href="https://api.whatsapp.com/send/?text=Incre%C3%ADble+entrada+en+el+blog.+#{url_encode(blog_post.website_url)}"
+            <a t-attf-href="https://api.whatsapp.com/send/?text=Incre%C3%ADble+entrada+en+el+blog.+#{blog_post.website_absolute_url}"
                aria-label="WhatsApp"
                title="WhatsApp"
                t-attf-class="o_whatsapp #{classes}">
